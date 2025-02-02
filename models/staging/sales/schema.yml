@@ -1,0 +1,12 @@
+sources:
+  - name: erp_sales
+    description: sistema de vendas erp - modulo sales
+    schema: raw_adventure_works
+    database: fea24_11
+    tables: 
+      - name: salesorderheader
+      - name: salesorderdetail
+      - name: creditcard
+      - name: personcreditcard 
+      - name: salesorderheadersalesreason
+      - name: salesreason
