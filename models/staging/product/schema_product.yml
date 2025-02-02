@@ -1,0 +1,7 @@
+sources:
+  - name: erp_product
+    description: sistema de produtos erp - modulo production
+    schema: raw_adventure_works
+    database: fea24_11
+    tables: 
+      - name: product
