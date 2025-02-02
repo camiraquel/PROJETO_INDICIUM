@@ -1,0 +1,10 @@
+sources:
+  - name: erp_person
+    description: sistema de person erp - modulo person
+    schema: raw_adventure_works
+    database: fea24_11
+    tables: 
+      - name: person
+      - name: address
+      - name: stateprovince 
+      - name: countryregion 
