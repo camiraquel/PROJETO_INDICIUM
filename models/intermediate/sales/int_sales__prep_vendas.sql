@@ -1,39 +1,65 @@
 with
-    endereco as (
+    solicitacao_venda as (
         select *
-        from {{ ref("stg_address") }}
+        from {{ ref("stg_salesorderheader") }}
     ),
-    estado as (
+    detalhe_venda as (
         select *
-        from {{ ref("stg_stateprovince") }}
+        from {{ ref("stg_salesorderdetail") }}
     ),
-    pais as (
+    razao_venda as (
         select *
-        from {{ ref("stg_countryregion") }}
+        from {{ ref("stg_salesorderheadersalesreason") }}
     ),
-    endereco_incrementado as (
+    razao as (
+        select *
+        from {{ ref("stg_salesreason") }}
+    ),
+    venda_incrementado as (
         select
-            endereco.pk_endereco,
-            endereco.linha1_endereco,
-            endereco.linha2_endereco,
-            endereco.cidade,
-            endereco.codigo_postal,
-            endereco.localizacao,
-            endereco.data_modificacao as data_modificacao_endereco,
-            estado.pk_estado,
-            estado.codigo_estado,
-            estado.ind_unico_estato,
-            estado.nome as nome_estado,
-            estado.fk_territorio,            
-            estado.data_modificacao as data_modificacao_estado,
-            pais.pk_codigo_pais,
-            pais.nome as nome_pais,
-            pais.data_modificacao as data_modificacao_pais
-        from endereco
-        left join estado
-            on endereco.fk_estado = estado.pk_estado
-        left join pais
-            on estado.fk_codigo_pais = pais.pk_codigo_pais
+            solicitacao_venda.pk_ordem_venda,
+            solicitacao_venda.numero_revisao,
+            solicitacao_venda.data_compra,
+            solicitacao_venda.data_vencimento,
+            solicitacao_venda.data_envio,
+            solicitacao_venda.status,
+            solicitacao_venda.ind_ordem_online,
+            solicitacao_venda.numero_ordem_compra,
+            solicitacao_venda.numero_conta,
+            solicitacao_venda.fk_cliente,
+            solicitacao_venda.fk_vendedor,
+            solicitacao_venda.fk_territorio,
+            solicitacao_venda.fk_endereco_cobranca,
+            solicitacao_venda.fk_endereco_envio,
+            solicitacao_venda.fk_metodo_envio,
+            solicitacao_venda.fk_cartao_credito,
+            solicitacao_venda.codigo_aprovacao_cartao_credito,
+            solicitacao_venda.fk_taxa_cambio,
+            solicitacao_venda.subtotal,
+            solicitacao_venda.taxamt,
+            solicitacao_venda.frete,
+            solicitacao_venda.total_devido,
+            solicitacao_venda.comentario,
+            solicitacao_venda.data_modificacao as data_modificacao_solicitacao_venda,
+            detalhe_venda.fk_detalhe_pedido_venda,
+            detalhe_venda.numero_rastreamento,
+            detalhe_venda.quantidade_pedido,
+            detalhe_venda.fk_produto,
+            detalhe_venda.fk_oferta_especial,
+            detalhe_venda.preco_unitario,
+            detalhe_venda.desconto_preco_unitario,
+            detalhe_venda.data_modificacao as data_modificacao_detalhe_venda,
+            razao_venda.pk_fk_razao_venda,
+            razao.nome,
+            razao.tipo_razao,
+            razao.data_modificacao as data_modificacao_razao
+        from solicitacao_venda
+        left join detalhe_venda
+            on solicitacao_venda.pk_ordem_venda = detalhe_venda.pk_pedido_venda
+        left join razao_venda
+            on solicitacao_venda.pk_ordem_venda = razao_venda.pk_fk_ordem_venda
+        left join razao
+            on razao_venda.pk_fk_razao_venda = razao.pk_razao_venda
     )
 select * 
-from endereco_incrementado
+from venda_incrementado
