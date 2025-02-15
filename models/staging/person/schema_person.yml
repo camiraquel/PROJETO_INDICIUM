@@ -1,10 +1,33 @@
 sources:
   - name: erp_person
-    description: sistema de person erp - modulo person
+    description: Modulo de Person do sistema Adventure Works
     schema: raw_adventure_works
     database: fea24_11
-    tables: 
+    tables:
       - name: person
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+
       - name: address
-      - name: stateprovince 
-      - name: countryregion 
+        columns:
+          - name: addressid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: stateprovince
+        columns:
+          - name: stateprovinceid
+            data_tests:
+              - unique
+              - not_null
+
+      - name: countryregion
+        columns:
+          - name: countryregioncode
+            data_tests:
+              - unique
+              - not_null

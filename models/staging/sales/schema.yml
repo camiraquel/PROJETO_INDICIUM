@@ -5,8 +5,53 @@ sources:
     database: fea24_11
     tables: 
       - name: salesorderheader
+        columns:
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null
       - name: salesorderdetail
+        columns:
+          - name: salesorderid
+            data_tests:
+              - not_null
+          - name: salesorderdetailid
+            data_tests:
+              - not_null
+        data_tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns: [salesorderid, salesorderdetailid]
       - name: creditcard
+        columns:
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null
       - name: personcreditcard
+        columns:
+          - name: businessentityid
+            data_tests:
+              - not_null
+          - name: creditcardid
+            data_tests:
+              - not_null
+        data_tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns: [businessentityid, creditcardid]
       - name: salesorderheadersalesreason
+        columns:
+          - name: salesorderid
+            data_tests:
+              - not_null
+          - name: salesreasonid
+            data_tests:
+              - not_null
+        data_tests:
+        - dbt_utils.unique_combination_of_columns:
+            combination_of_columns: [salesorderid, salesreasonid]
       - name: salesreason
+        columns:
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null
