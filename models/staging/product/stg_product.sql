@@ -3,8 +3,7 @@ with
         select
         *
         from {{source("erp_product", "product")}}
-    )
- 
+    ) 
     , renomeado as (
         select
         cast(productid as int) as pk_produto,
@@ -14,7 +13,7 @@ with
         cast(finishedgoodsflag as boolean) as flag_finalizado,
         cast(color as string) as cor,
         cast(safetystocklevel as int) as nivel_estoque_seguro,
-        cast(reorderpoint as float) as ponto_reordenacao,
+        cast(reorderpoint as int) as ponto_reordenacao,
         cast(standardcost as float) as custo_padrao,
         cast(listprice as float) as lista_preco,
         cast(size as string) as tamanho,
@@ -29,7 +28,7 @@ with
         cast(productmodelid as int) as modelo_produto,
         cast(sellstartdate as string) as data_inicio_venda,
         cast(sellenddate as string) as data_fim_venda,
-        cast(discontinueddate as string) as data_descontinuacao,
+        cast(discontinueddate as int) as data_descontinuacao,
         cast(rowguid as string) as identificador_linha,
         cast(modifieddate as string) as data_modificacao
         from fonte_product
