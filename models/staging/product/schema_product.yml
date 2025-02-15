@@ -5,3 +5,8 @@ sources:
     database: fea24_11
     tables: 
       - name: product
+        columns:
+          - name: productid
+            data_tests:
+              - unique
+              - not_null
