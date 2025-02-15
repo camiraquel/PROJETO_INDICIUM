@@ -8,7 +8,7 @@ with
         select
         cast(productid as int) as pk_produto,
         cast(name as string) as nome_produto,
-        cast(productnumber as int) as numero_produto,
+        cast(productnumber as string) as numero_produto,
         cast(makeflag as boolean) as flag,
         cast(finishedgoodsflag as boolean) as flag_finalizado,
         cast(color as string) as cor,
