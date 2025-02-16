@@ -17,6 +17,7 @@ with
     ),
     venda_incrementado as (
         select
+            ROW_NUMBER() OVER (ORDER BY solicitacao_venda.pk_ordem_venda, detalhe_venda.fk_detalhe_pedido_venda) AS SEQ_INT_VENDAS, 
             solicitacao_venda.pk_ordem_venda,
             solicitacao_venda.numero_revisao,
             solicitacao_venda.data_compra,

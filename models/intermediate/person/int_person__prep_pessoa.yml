@@ -1,0 +1,33 @@
+models:
+  - name: int_person__prep_pessoa
+    description: Modulo de Person prep pessoa
+    columns:
+      - name: PK_FK_ENTIDADE_NEGOCIO 
+        description: PK da tabela Pessoa.
+        data_tests:
+          - unique
+          - not_null
+      - name: TIPO_PESSOA
+        description: tipo da pessoa.
+      - name: ESTILO_NOME
+        description: estilo do nome.
+      - name: TITULO
+        description: titulo da pessoa.
+      - name: PRIMEIRO_NOME
+        description: Primeiro nome.
+      - name: NOME_MEIO
+        description: nome do meio da pessoa.
+      - name: ULTIMO_NOME
+        description: ultimo nome da pessoa.
+      - name: SUFIXO
+        description: sufixo da pessoa.
+      - name: PROMOCAO_EMAIL
+        description: email cadastrado para envio de promoções.
+      - name: INFO_ADICIONAL_CONTATO
+        description: informação adicional para contato.
+      - name: DEMOGRAFIA
+        description: demografia.
+      - name: IDENTIFICADOR_LINHA
+        description: identificador da linha no banco.
+      - name: DATA_MODIFICACAO
+        description: ultima data de modificação do dado.

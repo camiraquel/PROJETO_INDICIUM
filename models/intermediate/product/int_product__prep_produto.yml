@@ -1,0 +1,57 @@
+models:
+  - name: int_product__prep_produto
+    description: Modulo de Product prep produto
+    columns:
+      - name: PK_PRODUTO
+        description: PK da tabela Produto.
+        data_tests:
+          - unique
+          - not_null
+      - name: NOME_PRODUTO
+        description: nome produto.
+      - name: NUMERO_PRODUTO
+        description: numero produto.
+      - name: FLAG
+        description: flag identificador produto.
+      - name: FLAG_FINALIZADO
+        description: flag identificador finalizado produto.
+      - name: COR
+        description: cor do produto.
+      - name: NIVEL_ESTOQUE_SEGURO
+        description: nivel de estoque para aquele produto.
+      - name: PONTO_REORDENACAO
+        description: Ponto de reordenacao.
+      - name: CUSTO_PADRAO
+        description: custo padrao do produto.
+      - name: LISTA_PRECO
+        description: preco listado do produto.
+      - name: TAMANHO
+        description: tamanho do produto.
+      - name: TAMANHO_UNITARIO_CODIGO_MEDIDA
+        description: tamanho unitario do produto.
+      - name: PESO_UNITARIO_CODIGO_MEDIDA
+        description: peso unitario do produto.
+      - name: PESO
+        description: peso do produto.
+      - name: DIAS_PRA_PRODUCAO
+        description: dias de producao.
+      - name: LINHA_PRODUTO
+        description: linha do produto.
+      - name: CLASSE
+        description: classe do produto.
+      - name: ESTILO
+        description: estilo do produto.
+      - name: FK_SUBCATEGORIA_PRODUTO
+        description: PK da tabela subcategoria produto.
+      - name: MODELO_PRODUTO
+        description: modelo do produto.
+      - name: DATA_INICIO_VENDA
+        description: data inicio de vanda do produto.
+      - name: DATA_FIM_VENDA
+        description: data de fim da venda do produto.
+      - name: DATA_DESCONTINUACAO
+        description: data de descontinuacao.
+      - name: IDENTIFICADOR_LINHA
+        description: identificador de linha.
+      - name: DATA_MODIFICACAO
+        description: data de modificacao do dado.

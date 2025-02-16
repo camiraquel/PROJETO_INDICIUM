@@ -1,0 +1,85 @@
+models:
+  - name: int_sales__prep_vendas
+    description: Modulo de Sales prep vendas
+    columns:
+      - name: SEQ_INT_VENDAS
+        description: Sequencial unido gerado aleatoriamente para a int venda.
+        data_tests:
+          - unique
+          - not_null
+      - name: PK_ORDEM_VENDA
+        description: PK da tabela ordem de venda.
+        data_tests:
+          - not_null
+      - name: NUMERO_REVISAO
+        description: numero de revisao da venda.
+      - name: DATA_COMPRA
+        description: data da compra.
+      - name: DATA_VENCIMENTO
+        description: data de vencimento da venda.
+      - name: DATA_ENVIO
+        description: data de envio da venda.
+      - name: STATUS
+        description: status da venda.
+      - name: IND_ORDEM_ONLINE
+        description: indicador de ordem online de venda.
+      - name: NUMERO_ORDEM_COMPRA
+        description: numero de ordem de compra.
+      - name: NUMERO_CONTA
+        description: numero da conta da venda.
+      - name: FK_CLIENTE
+        description: PK da tabela cliente.
+      - name: FK_VENDEDOR
+        description: PK da tabela vendedor.
+      - name: FK_TERRITORIO
+        description: PK da tabela territorio.
+      - name: FK_ENDERECO_COBRANCA
+        description: identificador do endereco de cobranca.
+      - name: FK_ENDERECO_ENVIO
+        description: identificador do endereco de envio.
+      - name: FK_METODO_ENVIO
+        description: identificador metodo de envio.
+      - name: FK_CARTAO_CREDITO
+        description: PK da tabela cartao de credito.
+      - name: CODIGO_APROVACAO_CARTAO_CREDITO
+        description: codigo de aprovacao da venda no cartao de credito.
+      - name: FK_TAXA_CAMBIO
+        description: identificador da taxa de cambio.
+      - name: SUBTOTAL
+        description: subtotal do valor de venda.
+      - name: TAXAMT
+        description: taxa amt da venda.
+      - name: FRETE
+        description: frete da venda.
+      - name: TOTAL_DEVIDO
+        description: total devido da venda.
+      - name: COMENTARIO
+        description: comentario relacionado a venda.
+      - name: DATA_MODIFICACAO_SOLICITACAO_VENDA
+        description: data de solicitacao de modificacao da venda.
+      - name: FK_DETALHE_PEDIDO_VENDA
+        description: pk da tabela detalhe pedido venda.
+        data_tests:
+          - not_null
+      - name: NUMERO_RASTREAMENTO
+        description: numero de rastreamento da venda.
+      - name: QUANTIDADE_PEDIDO
+        description: quantidade de pedidos na venda.
+      - name: FK_PRODUTO
+        description: pk da tabela produto.
+      - name: FK_OFERTA_ESPECIAL
+        description: identificador da oferta especial.
+      - name: PRECO_UNITARIO
+        description: preco unitario do produto na venda.
+      - name: DESCONTO_PRECO_UNITARIO
+        description: denconto concedido no preco unitario na venda.
+      - name: DATA_MODIFICACAO_DETALHE_VENDA
+        description: data de modificacao dos dados da detalhe venda.
+      - name: PK_FK_RAZAO_VENDA
+        description: pk da tabela razao venda.
+      - name: NOME
+        description: nome da razao de venda.
+      - name: TIPO_RAZAO
+        description: tipo da razao de venda.
+      - name: DATA_MODIFICACAO_RAZAO
+        description: data de modificacao dos dados da razao de venda.
