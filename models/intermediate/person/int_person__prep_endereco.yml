@@ -1,0 +1,43 @@
+models:
+  - name: int_person__prep_endereco
+    description: Modulo de Person prep endereco
+    columns:
+      - name: PK_ENDERECO
+        description: PK da tabela endereço.
+        data_tests:
+          - unique
+          - not_null
+      - name: LINHA1_ENDERECO
+        description: linha 1 do endereço.
+      - name: LINHA2_ENDERECO
+        description: linha 2 do endereçoa.
+      - name: CIDADE
+        description: cidade.
+      - name: CODIGO_POSTAL
+        description: codigo posta ou cep.
+      - name: LOCALIZACAO
+        description: localizacao.
+      - name: DATA_MODIFICACAO_ENDERECO
+        description: data de modificação do endereço.
+      - name: PK_ESTADO
+        description: PK da tabela estado.
+        data_tests:
+          - not_null
+      - name: CODIGO_ESTADO
+        description: codigo do estado.
+      - name: IND_UNICO_ESTADO
+        description: indicador unico de estado.
+      - name: NOME_ESTADO
+        description: nome do estado.
+      - name: FK_TERRITORIO
+        description: pk da tabela territorio.	  
+      - name: DATA_MODIFICACAO_ESTADO
+        description: data de modificação da tabela estado.
+      - name: PK_CODIGO_PAIS
+        description: PK da tabela pais.
+        data_tests:
+          - not_null
+      - name: NOME_PAIS
+        description: nome do pais.
+      - name: DATA_MODIFICACAO_PAIS
+        description: data de modificação da tabela pais.

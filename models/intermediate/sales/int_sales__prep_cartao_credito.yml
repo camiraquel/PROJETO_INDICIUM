@@ -1,0 +1,25 @@
+models:
+  - name: int_sales__prep_cartao_credito
+    description: Modulo de Sales prep cartao credito
+    columns:
+      - name: PK_CARTAO_CREDITO
+        description: PK da tabela Cartao de credito.
+        data_tests:
+          - unique
+          - not_null
+      - name: TIPO_CARTAO
+        description: tipo do cartao de credito.
+      - name: NUMERO_CARTAO
+        description: numero do cartao de credito.
+      - name: MES_EXPIRACAO
+        description: mes de expiracao do cartao de credito.
+      - name: ANO_EXPIRACAO
+        description: ano de expiracao do cartao de credito.
+      - name: DATA_MODIFICACAO_CARTAO
+        description: data de modificacao do cartao de credito.
+      - name: PK_ENTIDADE_NEGOCIO
+        description: pk da tabela pessoa cartao de credito.
+        data_tests:
+          - not_null
+      - name: DATA_MODIFICACAO_PESSOA_CARTAO
+        description: data de modificacao da pessoa cartao de credito.
