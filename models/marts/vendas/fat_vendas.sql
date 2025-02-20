@@ -21,6 +21,7 @@ with
     ),
     fat_vendas as (
         select
+            dim_solicitacao_venda.SEQ_INT_VENDAS,
             dim_solicitacao_venda.pk_ordem_venda,
             dim_solicitacao_venda.quantidade_pedido,
             dim_solicitacao_venda.fk_produto,
