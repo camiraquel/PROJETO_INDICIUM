@@ -6,7 +6,7 @@ models:
         description: pk da tabela razao venda.
         data_tests:
           - not_null
-      - name: PK_FK_ORDEM_VENDA
+      - name: PK_ORDEM_VENDA
         description: pk da tabela de venda.
         data_tests:
           - not_null
