@@ -75,11 +75,3 @@ models:
         description: denconto concedido no preco unitario na venda.
       - name: DATA_MODIFICACAO_DETALHE_VENDA
         description: data de modificacao dos dados da detalhe venda.
-      - name: PK_FK_RAZAO_VENDA
-        description: pk da tabela razao venda.
-      - name: NOME
-        description: nome da razao de venda.
-      - name: TIPO_RAZAO
-        description: tipo da razao de venda.
-      - name: DATA_MODIFICACAO_RAZAO
-        description: data de modificacao dos dados da razao de venda.
