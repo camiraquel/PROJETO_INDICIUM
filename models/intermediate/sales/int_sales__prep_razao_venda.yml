@@ -1,0 +1,18 @@
+models:
+  - name: int_sales__prep_razao_venda
+    description: Modulo de Sales prep razao venda
+    columns:
+      - name: PK_FK_RAZAO_VENDA
+        description: pk da tabela razao venda.
+        data_tests:
+          - not_null
+      - name: PK_FK_ORDEM_VENDA
+        description: pk da tabela de venda.
+        data_tests:
+          - not_null
+      - name: NOME
+        description: nome da razao de venda.
+      - name: TIPO_RAZAO
+        description: tipo da razao de venda.
+      - name: DATA_MODIFICACAO_RAZAO
+        description: data de modificacao dos dados da razao de venda.
