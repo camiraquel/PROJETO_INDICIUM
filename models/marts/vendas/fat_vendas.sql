@@ -28,6 +28,7 @@ with
             dim_solicitacao_venda.preco_unitario, 
             dim_solicitacao_venda.desconto_preco_unitario,
             dim_solicitacao_venda.fk_cartao_credito,
+            dim_razao_venda.SEQ_INT_RAZAO_VENDA,
             dim_razao_venda.pk_fk_razao_venda,
             dim_solicitacao_venda.data_compra,
             dim_pessoa.pk_fk_entidade_negocio,

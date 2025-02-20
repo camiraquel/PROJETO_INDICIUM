@@ -9,6 +9,7 @@ with
     ),
     razao_venda_incremendado as (
         select
+            ROW_NUMBER() OVER (ORDER BY razao_venda.pk_fk_razao_venda, razao_venda.pk_fk_ordem_venda) AS SEQ_INT_RAZAO_VENDA,
             razao_venda.pk_fk_razao_venda,
             razao_venda.pk_fk_ordem_venda as pk_ordem_venda,
             razao.nome,

@@ -2,6 +2,11 @@ models:
   - name: int_person__prep_endereco
     description: Modulo de Person prep endereco
     columns:
+      - name: SEQ_INT_ENDERECO
+        description: Sequencial unico da tabela endereço.
+        data_tests:
+          - unique
+          - not_null  
       - name: PK_ENDERECO
         description: PK da tabela endereço.
         data_tests:
