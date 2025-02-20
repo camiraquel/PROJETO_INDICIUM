@@ -34,6 +34,7 @@ with
             dim_pessoa.pk_fk_entidade_negocio,
             dim_solicitacao_venda.status,
             dim_solicitacao_venda.fk_endereco_envio,
+            dim_endereco.SEQ_INT_ENDERECO,
             dim_endereco.pk_estado,
             dim_endereco.pk_codigo_pais,
             dim_solicitacao_venda.subtotal
