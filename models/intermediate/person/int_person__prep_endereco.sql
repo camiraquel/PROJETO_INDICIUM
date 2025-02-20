@@ -13,6 +13,7 @@ with
     ),
     endereco_incrementado as (
         select
+            ROW_NUMBER() OVER (ORDER BY endereco.pk_endereco, estado.pk_estado, pais.pk_codigo_pais) AS SEQ_INT_ENDERECO, 
             endereco.pk_endereco,
             endereco.linha1_endereco,
             endereco.linha2_endereco,

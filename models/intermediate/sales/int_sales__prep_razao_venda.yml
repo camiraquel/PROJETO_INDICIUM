@@ -2,6 +2,11 @@ models:
   - name: int_sales__prep_razao_venda
     description: Modulo de Sales prep razao venda
     columns:
+      - name: SEQ_INT_RAZAO_VENDA
+        description: Sequencial unico da tabela razao venda.
+        data_tests:
+          - unique
+          - not_null
       - name: PK_FK_RAZAO_VENDA
         description: pk da tabela razao venda.
         data_tests:
