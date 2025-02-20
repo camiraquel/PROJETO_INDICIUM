@@ -37,7 +37,7 @@ with
             dim_solicitacao_venda.subtotal
         from dim_solicitacao_venda
         left join dim_razao_venda
-            on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_fk_ordem_venda
+            on dim_solicitacao_venda.pk_ordem_venda = dim_razao_venda.pk_ordem_venda
         left join dim_cartao_credito
             on dim_solicitacao_venda.fk_cartao_credito = dim_cartao_credito.pk_cartao_credito
         left join dim_pessoa

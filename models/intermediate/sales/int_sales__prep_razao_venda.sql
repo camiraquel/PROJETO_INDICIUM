@@ -10,7 +10,7 @@ with
     razao_venda_incremendado as (
         select
             razao_venda.pk_fk_razao_venda,
-            razao_venda.pk_fk_ordem_venda,
+            razao_venda.pk_fk_ordem_venda as pk_ordem_venda,
             razao.nome,
             razao.tipo_razao,
             razao.data_modificacao as data_modificacao_razao
