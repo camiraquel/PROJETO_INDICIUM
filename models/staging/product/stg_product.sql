@@ -27,10 +27,10 @@ with
         cast(productsubcategoryid as int) as fk_subcategoria_produto,
         cast(productmodelid as int) as modelo_produto,
         cast(sellstartdate as string) as data_inicio_venda,
-        cast(sellenddate as string) as data_fim_venda,
-        cast(discontinueddate as int) as data_descontinuacao,
+        cast(sellenddate as timestamp) as data_fim_venda,
+        cast(discontinueddate as timestamp) as data_descontinuacao,
         cast(rowguid as string) as identificador_linha,
-        cast(modifieddate as string) as data_modificacao
+        cast(modifieddate as timestamp) as data_modificacao
         from fonte_product
     )
  

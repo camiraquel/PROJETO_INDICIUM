@@ -14,7 +14,7 @@ with
             cast(name as string) as nome,
             cast(territoryid as int) as fk_territorio,
             cast(rowguid as string) as identificador_linha,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_stateprovince
     )
  

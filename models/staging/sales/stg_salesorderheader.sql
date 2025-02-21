@@ -9,9 +9,9 @@ with
         select
             cast(salesorderid as int) as pk_ordem_venda,
             cast(revisionnumber as int) as numero_revisao,
-            cast(orderdate as string) as data_compra,
-            cast(duedate as string) as data_vencimento,
-            cast(shipdate as string) as data_envio,
+            cast(orderdate as timestamp) as data_compra,
+            cast(duedate as timestamp) as data_vencimento,
+            cast(shipdate as timestamp) as data_envio,
             cast(status as int) as status,
             cast(onlineorderflag as boolean) as ind_ordem_online,
             cast(purchaseordernumber as string) as numero_ordem_compra,
@@ -31,7 +31,7 @@ with
             cast(totaldue as float) as total_devido,
             cast(comment as int) as comentario,
             cast(rowguid as string) as identificador_linha,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_salesorderheader
     )
  

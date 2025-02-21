@@ -12,7 +12,7 @@ with
             cast(cardnumber as int) as numero_cartao,
             cast(expmonth as int) as mes_expiracao,
             cast(expyear as int) as ano_expiracao,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_creditcard
     )
  

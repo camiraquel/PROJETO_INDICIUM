@@ -19,7 +19,7 @@ with
             cast(additionalcontactinfo as string) as info_adicional_contato,
             cast(demographics as string) as demografia,
             cast(rowguid as string) as identificador_linha,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_person
     )
  

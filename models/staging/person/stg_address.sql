@@ -15,7 +15,7 @@ with
             cast(postalcode as string) as codigo_postal,
             cast(spatiallocation as string) as localizacao,
             cast(rowguid as string) as identificador_linha,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_address
     )
  
