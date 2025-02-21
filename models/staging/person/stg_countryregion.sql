@@ -9,7 +9,7 @@ with
         select
             cast(countryregioncode as string) as pk_codigo_pais,
             cast(name as string) as nome,
-            cast(modifieddate as string) as data_modificacao
+            cast(modifieddate as timestamp) as data_modificacao
         from fonte_countryregion
     )
  
